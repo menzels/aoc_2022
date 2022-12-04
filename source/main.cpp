@@ -1,5 +1,6 @@
 import puzzle_01;
 import puzzle_02;
+import puzzle_03;
 
 import std.core;
 
@@ -18,5 +19,7 @@ int main()
   std::cout << std::format("AOC 2022 01_b: The 3 Elves carrying most calories carry {0} calories!\n", CallTimed(SumCaloriesTop3Elves));
   std::cout << std::format("AOC 2022 02_a: My score playing RPS by the strategy guide will be {0}!\n", CallTimed(RockPaperScissorsScore));
   std::cout << std::format("AOC 2022 02_b: My score playing the correct strategy will be {0}!\n", CallTimed(RockPaperScissorsScoreCorretcStrategy));
+  std::cout << std::format("AOC 2022 03_a: The combined priority of common items in rucksacks is {0}!\n", CallTimed(DuplicatedItemPrioritySum));
+  std::cout << std::format("AOC 2022 03_b: The combined priority of badge items in rucksacks is {0}!\n", CallTimed(BadgePrioritySum));
   return 0;
 }
