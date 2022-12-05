@@ -10,3 +10,8 @@ target_sources(
   TYPE CXX_MODULES
   FILES puzzle_03.cpp
 )
+
+target_link_libraries(
+  puzzle_03
+  PRIVATE common
+)
