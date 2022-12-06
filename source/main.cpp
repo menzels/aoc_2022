@@ -3,13 +3,14 @@ import puzzle_02;
 import puzzle_03;
 import puzzle_04;
 import puzzle_05;
+import puzzle_06;
 
 import std.core;
 
-auto CallTimed(auto &&f)
+auto CallTimed(auto &&f, auto &&...args)
 {
   auto t1 = std::chrono::high_resolution_clock::now();
-  auto ret = f();
+  auto ret = f(args...);
   auto t2 = std::chrono::high_resolution_clock::now();
   std::cout << std::chrono::duration<double, std::milli>(t2 - t1) << " ";
   return std::move(ret);
@@ -32,5 +33,7 @@ int main()
   Print(std::format("AOC 2022 04_b: The number of work assignments with overlap is {0}!\n", CallTimed(WorkAssignmentsWithOverlapCount)));
   Print(std::format("AOC 2022 05_a: The crates on top are {0}!\n", CallTimed(CratesOnTop)));
   Print(std::format("AOC 2022 05_b: For the 9001 version, the crates on top are {0}!\n", CallTimed(CratesOnTop9001)));
+  Print(std::format("AOC 2022 06_a: Chars received before sync {0}!\n", CallTimed(CharsBeforeSync, 4)));
+  Print(std::format("AOC 2022 06_b: Chars received before message {0}!\n", CallTimed(CharsBeforeSync, 14)));
   return 0;
 }

@@ -5,5 +5,10 @@ add_executable(main main.cpp)
 
 target_link_libraries(
   main
-  PRIVATE puzzle_01 puzzle_02 puzzle_03 puzzle_04 puzzle_05
+  PRIVATE puzzle_01
+          puzzle_02
+          puzzle_03
+          puzzle_04
+          puzzle_05
+          puzzle_06
 )
