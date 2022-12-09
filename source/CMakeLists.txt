@@ -12,4 +12,5 @@ target_link_libraries(
           puzzle_05
           puzzle_06
           puzzle_07
+          puzzle_08
 )
